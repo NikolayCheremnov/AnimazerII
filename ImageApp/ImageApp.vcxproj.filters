@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков\internal">
+      <UniqueIdentifier>{ed002f46-62c1-42d0-8a5b-53c5074bcb6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\internal">
+      <UniqueIdentifier>{e137258b-604a-4167-9161-44e236d350e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\internal\Logger2">
+      <UniqueIdentifier>{80ce7357-f66e-411a-965f-96e06c8ffe08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\internal\Logger2">
+      <UniqueIdentifier>{e25e19ae-f2ba-4a03-9ebc-ddee3c559af3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ImageApp.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageObj.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="MatImage.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleImage.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\PatternLogger.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2BuilderI.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\StandardLogger2Builder.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2Director.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Image.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageObj.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MatImage.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleImage.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\ErrorLogger.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\PatternLogger.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2BuilderI.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2Director.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
