@@ -9,7 +9,7 @@ void PatternLogger::log(int l_type, string l_args)
 		pl_out.open(logs_path + "\\PATTERNLOGS.log", ios::app);
 		vector<string> args = get_tokens(l_args, ":");
 		if (args.size() == 5)
-			pl_out << get_time() << "pl> " << "patt: " << args[0] <<
+			pl_out << get_time() << " pl> " << "patt: " << args[0] <<
 			" class: " << args[1] << " meth: " << args[2] <<
 			" obj_id: " << args[3] << " msg: " << args[4] << endl;
 		else

@@ -25,6 +25,12 @@
     <Filter Include="Файлы заголовков\internal\Logger2">
       <UniqueIdentifier>{e25e19ae-f2ba-4a03-9ebc-ddee3c559af3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\internal\interfaces">
+      <UniqueIdentifier>{59dabf16-eec3-4da4-aef3-ef2ff82ffc93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\internal\interfaces">
+      <UniqueIdentifier>{5a3a7a21-2a5a-40e2-84f7-7b19d4f855b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ImageApp.cpp">
@@ -42,12 +48,6 @@
     <ClCompile Include="SingleImage.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\internal\Logger2\PatternLogger.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="..\internal\Logger2\Logger2.cpp">
       <Filter>Исходные файлы\internal\Logger2</Filter>
     </ClCompile>
@@ -58,6 +58,18 @@
       <Filter>Исходные файлы\internal\Logger2</Filter>
     </ClCompile>
     <ClCompile Include="..\internal\Logger2\Logger2Director.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\PatternLogger.cpp">
+      <Filter>Исходные файлы\internal\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\api\LoggerI.cpp">
+      <Filter>Исходные файлы\internal\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\InfoLogger.cpp">
       <Filter>Исходные файлы\internal\Logger2</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,12 +86,6 @@
     <ClInclude Include="SingleImage.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\internal\Logger2\ErrorLogger.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\internal\Logger2\PatternLogger.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="..\internal\Logger2\Logger2BuilderI.h">
       <Filter>Файлы заголовков\internal\Logger2</Filter>
     </ClInclude>
@@ -90,6 +96,18 @@
       <Filter>Файлы заголовков\internal\Logger2</Filter>
     </ClInclude>
     <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\ErrorLogger.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\PatternLogger.h">
+      <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\api\LoggerI.h">
+      <Filter>Файлы заголовков\internal\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\InfoLogger.h">
       <Filter>Файлы заголовков\internal\Logger2</Filter>
     </ClInclude>
   </ItemGroup>

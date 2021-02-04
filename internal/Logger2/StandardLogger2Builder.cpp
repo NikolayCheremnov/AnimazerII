@@ -8,4 +8,7 @@ void StandardLogger2Builder::MakeLoggersChain()
 	ErrorLogger* el = new ErrorLogger("sl2b_builded_el");
 	el->set_logs_path(path);
 	pl->set_nextLogger(el);
+	InfoLogger* il = new InfoLogger("sl2b_builded_il");
+	il->set_logs_path(path);
+	el->set_nextLogger(il);
 }

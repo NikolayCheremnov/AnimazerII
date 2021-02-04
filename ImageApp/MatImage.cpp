@@ -11,14 +11,25 @@ void MatImage::init(string path)
 	try {
 		img = new Mat();
 		*img = imread(path);
+		if (lg != nullptr) 
+			lg->log(3, "'MatImage' object " + ID + "was initialize");
 	}
 	catch (Exception ex) {
-		// write exception log here
+		if (lg != nullptr)
+			lg->log(2, "MatImage:init:" + ID + ":" + ex.what() + ":");
+		throw ex;
 	}
 }
 
 void MatImage::show(string s_args)
 {
-	imshow(s_args, *img);
-	waitKey(0);
+	try {
+		imshow(s_args, *img);
+		waitKey(0);
+	}
+	catch (Exception ex) {
+		if (lg != nullptr)
+			lg->log(2, "MatImage:show:" + ID + ":" + ex.what() + ":");
+		throw ex;
+	}
 }

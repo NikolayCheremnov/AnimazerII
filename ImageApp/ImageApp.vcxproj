@@ -143,7 +143,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\internal\api\LoggerI.cpp" />
     <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp" />
+    <ClCompile Include="..\internal\Logger2\InfoLogger.cpp" />
     <ClCompile Include="..\internal\Logger2\Logger2.cpp" />
     <ClCompile Include="..\internal\Logger2\Logger2BuilderI.cpp" />
     <ClCompile Include="..\internal\Logger2\Logger2Director.cpp" />
@@ -156,7 +158,9 @@
     <ClCompile Include="SingleImage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\internal\api\LoggerI.h" />
     <ClInclude Include="..\internal\Logger2\ErrorLogger.h" />
+    <ClInclude Include="..\internal\Logger2\InfoLogger.h" />
     <ClInclude Include="..\internal\Logger2\Logger2.h" />
     <ClInclude Include="..\internal\Logger2\Logger2BuilderI.h" />
     <ClInclude Include="..\internal\Logger2\Logger2Director.h" />

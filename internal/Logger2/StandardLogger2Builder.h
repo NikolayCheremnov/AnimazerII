@@ -2,6 +2,7 @@
 #include "Logger2BuilderI.h"
 #include "PatternLogger.h"
 #include "ErrorLogger.h"
+#include "InfoLogger.h"
 
 using namespace std;
 

@@ -23,14 +23,14 @@ string Logger2::get_time()
     char       buf[80];
     tstruct = *localtime(&now);
     strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
-    return "(" + string(buf) + ")";
+    return "<" + string(buf) + ">";
 }
 
 void Logger2::unhandled_log(string l_args)
 {
     ofstream ul_out;
     ul_out.open(logs_path + "\\UNHANDLEDLOGS.log", ios::app);
-    ul_out << get_time() << "ul> " << l_args << endl;
+    ul_out << get_time() << " ul> " << l_args << endl;
     ul_out.close();
 }
 

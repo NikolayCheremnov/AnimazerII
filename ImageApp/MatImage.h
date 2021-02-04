@@ -14,9 +14,7 @@ private:
     Mat* img;
 
 public:
-    MatImage(string ID): ImageObj(ID) {
-        img = nullptr;
-    }
+    MatImage(string ID, LoggerI* lg) : ImageObj(ID, lg) { img = nullptr; }
     ~MatImage() {
         Release();
     }

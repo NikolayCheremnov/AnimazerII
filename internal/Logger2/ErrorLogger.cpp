@@ -9,7 +9,7 @@ void ErrorLogger::log(int l_type, string l_args)
 		el_out.open(logs_path + "\\ERRORLOGS.log", ios::app);
 		vector<string> args = get_tokens(l_args, ":");
 		if (args.size() == 4)
-			el_out << get_time() << "el> " << "class: " << args[0] <<
+			el_out << get_time() << " el> " << "class: " << args[0] <<
 			" meth: " << args[1] << " obj_id: " << args[2] <<
 			" msg: " << args[3] << endl;
 		else
