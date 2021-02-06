@@ -13,10 +13,111 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\interfaces">
+      <UniqueIdentifier>{9906f081-36a1-4cf4-ba02-ad8f1afb1017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\interfaces">
+      <UniqueIdentifier>{5c56cf29-2ef5-4f97-8472-b4145cea0c3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Logger2">
+      <UniqueIdentifier>{ba5dcb69-8030-4367-afab-51e7d9fa744f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Logger2">
+      <UniqueIdentifier>{d62af4f1-184b-4bee-8b9b-f73f8434919c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Image">
+      <UniqueIdentifier>{b6de6b38-80bb-4af7-86b3-635ed2ea4a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Image">
+      <UniqueIdentifier>{2966b107-e4c8-47e5-a373-d61597f3da1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Detector.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="ProcessorI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\api\LoggerI.cpp">
+      <Filter>Исходные файлы\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\InfoLogger.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2BuilderI.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\Logger2Director.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\PatternLogger.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\Logger2\StandardLogger2Builder.cpp">
+      <Filter>Исходные файлы\Logger2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\Image.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\ImageObj.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\MatImage.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\SingleImage.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ProcessorI.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\api\LoggerI.h">
+      <Filter>Файлы заголовков\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\ErrorLogger.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\InfoLogger.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2BuilderI.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\Logger2Director.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\PatternLogger.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\Image.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\ImageObj.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\MatImage.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\SingleImage.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\internal\Logger2\notes.txt" />
   </ItemGroup>
 </Project>

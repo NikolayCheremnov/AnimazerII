@@ -120,7 +120,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -147,7 +147,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\ImageApp\Image.cpp" />
+    <ClCompile Include="..\ImageApp\ImageObj.cpp" />
+    <ClCompile Include="..\ImageApp\MatImage.cpp" />
+    <ClCompile Include="..\ImageApp\SingleImage.cpp" />
+    <ClCompile Include="..\internal\api\LoggerI.cpp" />
+    <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp" />
+    <ClCompile Include="..\internal\Logger2\InfoLogger.cpp" />
+    <ClCompile Include="..\internal\Logger2\Logger2.cpp" />
+    <ClCompile Include="..\internal\Logger2\Logger2BuilderI.cpp" />
+    <ClCompile Include="..\internal\Logger2\Logger2Director.cpp" />
+    <ClCompile Include="..\internal\Logger2\PatternLogger.cpp" />
+    <ClCompile Include="..\internal\Logger2\StandardLogger2Builder.cpp" />
     <ClCompile Include="Detector.cpp" />
+    <ClCompile Include="ProcessorI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ImageApp\Image.h" />
+    <ClInclude Include="..\ImageApp\ImageObj.h" />
+    <ClInclude Include="..\ImageApp\MatImage.h" />
+    <ClInclude Include="..\ImageApp\SingleImage.h" />
+    <ClInclude Include="..\internal\api\LoggerI.h" />
+    <ClInclude Include="..\internal\Logger2\ErrorLogger.h" />
+    <ClInclude Include="..\internal\Logger2\InfoLogger.h" />
+    <ClInclude Include="..\internal\Logger2\Logger2.h" />
+    <ClInclude Include="..\internal\Logger2\Logger2BuilderI.h" />
+    <ClInclude Include="..\internal\Logger2\Logger2Director.h" />
+    <ClInclude Include="..\internal\Logger2\PatternLogger.h" />
+    <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h" />
+    <ClInclude Include="ProcessorI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\internal\Logger2\notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

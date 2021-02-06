@@ -14,14 +14,15 @@ void main() {
 	string path = "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.jpg";
 	Mat img_s = imread(path);
 	Mat img;
-	resize(img_s, img, Size(), 0.5, 0.5);
+	resize(img_s, img, Size(), 2, 2);
 
 	CascadeClassifier faceCascade;
-	faceCascade.load("D:\\cpplibs\\opencv\\sources\\data\\haarcascades_cuda\\haarcascade_frontalface_default.xml");
+	faceCascade.load("D:\\cpplibs\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml");
 
 	if (faceCascade.empty()) { cout << "XML file not loaded" << endl; }
 
 	vector<Rect> faces;
+	system("pause");
 	faceCascade.detectMultiScale(img, faces, 1.1, 10);
 
 	for (int i = 0; i < faces.size(); i++)
@@ -35,3 +36,4 @@ void main() {
 }
 
 
+//
