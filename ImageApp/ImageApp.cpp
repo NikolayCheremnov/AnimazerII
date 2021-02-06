@@ -31,4 +31,3 @@ int main() {
 	LoggerI* lg = LoggerTest();
 	SingleImageTest(lg);
 }
-
