@@ -75,6 +75,15 @@
     <ClCompile Include="..\ImageApp\SingleImage.cpp">
       <Filter>Исходные файлы\Image</Filter>
     </ClCompile>
+    <ClCompile Include="CascadeProcessor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\StatusImageI.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImageApp\DetectableImage.cpp">
+      <Filter>Исходные файлы\Image</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ProcessorI.h">
@@ -82,9 +91,6 @@
     </ClInclude>
     <ClInclude Include="..\internal\api\LoggerI.h">
       <Filter>Файлы заголовков\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h">
-      <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\internal\Logger2\ErrorLogger.h">
       <Filter>Файлы заголовков\Logger2</Filter>
@@ -114,6 +120,18 @@
       <Filter>Файлы заголовков\Image</Filter>
     </ClInclude>
     <ClInclude Include="..\ImageApp\SingleImage.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h">
+      <Filter>Файлы заголовков\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="CascadeProcessor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\StatusImageI.h">
+      <Filter>Файлы заголовков\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImageApp\DetectableImage.h">
       <Filter>Файлы заголовков\Image</Filter>
     </ClInclude>
   </ItemGroup>

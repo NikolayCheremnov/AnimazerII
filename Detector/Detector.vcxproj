@@ -147,10 +147,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\ImageApp\DetectableImage.cpp" />
     <ClCompile Include="..\ImageApp\Image.cpp" />
     <ClCompile Include="..\ImageApp\ImageObj.cpp" />
     <ClCompile Include="..\ImageApp\MatImage.cpp" />
     <ClCompile Include="..\ImageApp\SingleImage.cpp" />
+    <ClCompile Include="..\ImageApp\StatusImageI.cpp" />
     <ClCompile Include="..\internal\api\LoggerI.cpp" />
     <ClCompile Include="..\internal\Logger2\ErrorLogger.cpp" />
     <ClCompile Include="..\internal\Logger2\InfoLogger.cpp" />
@@ -159,14 +161,17 @@
     <ClCompile Include="..\internal\Logger2\Logger2Director.cpp" />
     <ClCompile Include="..\internal\Logger2\PatternLogger.cpp" />
     <ClCompile Include="..\internal\Logger2\StandardLogger2Builder.cpp" />
+    <ClCompile Include="CascadeProcessor.cpp" />
     <ClCompile Include="Detector.cpp" />
     <ClCompile Include="ProcessorI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\ImageApp\DetectableImage.h" />
     <ClInclude Include="..\ImageApp\Image.h" />
     <ClInclude Include="..\ImageApp\ImageObj.h" />
     <ClInclude Include="..\ImageApp\MatImage.h" />
     <ClInclude Include="..\ImageApp\SingleImage.h" />
+    <ClInclude Include="..\ImageApp\StatusImageI.h" />
     <ClInclude Include="..\internal\api\LoggerI.h" />
     <ClInclude Include="..\internal\Logger2\ErrorLogger.h" />
     <ClInclude Include="..\internal\Logger2\InfoLogger.h" />
@@ -175,6 +180,7 @@
     <ClInclude Include="..\internal\Logger2\Logger2Director.h" />
     <ClInclude Include="..\internal\Logger2\PatternLogger.h" />
     <ClInclude Include="..\internal\Logger2\StandardLogger2Builder.h" />
+    <ClInclude Include="CascadeProcessor.h" />
     <ClInclude Include="ProcessorI.h" />
   </ItemGroup>
   <ItemGroup>

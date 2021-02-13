@@ -20,7 +20,7 @@ Image::~Image()
 void Image::SetImageObj(ImageObj* img)
 {
 	try {
-		this->img = img;
+		this->img = img;	// TODO: очищать память от предыдущего img
 		if (lg != nullptr)
 			lg->log(1, "bridge:Image&ImageObj:SetImageObj:" + ID + "&" + img->getID() +
 				":Bridge is stretched between 'Image' object " + ID + "and 'ImageObj' object " + img->getID() + ":");

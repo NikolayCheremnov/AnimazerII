@@ -10,6 +10,7 @@
 #include "Image.h"
 #include "SingleImage.h"
 #include "MatImage.h"
+#include "DetectableImage.h"
 
 LoggerI* LoggerTest() {
 	// create chain
@@ -27,7 +28,18 @@ void SingleImageTest(LoggerI *lg) {
 }
 //
 
+void StatusImageTest(LoggerI *lg) {
+	Image* img = new SingleImage("single_img", lg);
+	DetectableImage* d_img = new DetectableImage("detectable_img", lg, img, "undefined");
+	d_img->SetImageObj(new MatImage("mat_img", lg));
+	d_img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.jpg");
+	d_img->PerformImageLoad();
+	d_img->SetInfo("false");
+}
+
 int main() {
+	DetectableImage::Status s = DetectableImage::Status::NEGATIVE;
 	LoggerI* lg = LoggerTest();
-	SingleImageTest(lg);
+	//SingleImageTest(lg);
+	StatusImageTest(lg);
 }

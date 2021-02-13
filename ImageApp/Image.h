@@ -14,10 +14,16 @@ protected:
 	LoggerI* lg;	// if nullptr then not logging else logging
 
 public:
+
 	Image(string ID, LoggerI* lg);
 	virtual ~Image();
-	void SetImageObj(ImageObj* img);
+
+	string getID() { return ID; }
+	virtual void SetImageObj(ImageObj* img);
+	virtual ImageObj* getImageObj() { return img; }
+
 	virtual void set_path(string path) = 0;
 	virtual void PerformImageLoad() = 0;
+	virtual void Show() = 0;
 };
 

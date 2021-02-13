@@ -14,5 +14,6 @@ public:
     ~SingleImage() {}
     void set_path(string path) { this->path = path; }
     void PerformImageLoad();
+    void Show();
 };
 

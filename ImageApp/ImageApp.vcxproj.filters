@@ -72,6 +72,12 @@
     <ClCompile Include="..\internal\Logger2\InfoLogger.cpp">
       <Filter>Исходные файлы\internal\Logger2</Filter>
     </ClCompile>
+    <ClCompile Include="StatusImageI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectableImage.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Image.h">
@@ -109,6 +115,12 @@
     </ClInclude>
     <ClInclude Include="..\internal\Logger2\InfoLogger.h">
       <Filter>Файлы заголовков\internal\Logger2</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusImageI.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectableImage.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -19,6 +19,8 @@ public:
         Release();
     }
     
+    Mat* getMatImg() { return img; }
+
     void Release();
     void init(string path);
     void show(string s_args);

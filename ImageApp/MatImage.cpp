@@ -12,7 +12,7 @@ void MatImage::init(string path)
 		img = new Mat();
 		*img = imread(path);
 		if (lg != nullptr) 
-			lg->log(3, "'MatImage' object " + ID + "was initialize");
+			lg->log(3, "'MatImage' object " + ID + " was initialize");
 	}
 	catch (Exception ex) {
 		if (lg != nullptr)

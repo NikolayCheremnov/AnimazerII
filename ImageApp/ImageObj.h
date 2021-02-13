@@ -17,5 +17,6 @@ public:
 	string getID() { return ID; }
 	virtual void init(string path) = 0;
 	virtual void show(string s_args) = 0;
+
 };
 

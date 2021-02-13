@@ -14,3 +14,8 @@ void SingleImage::PerformImageLoad()
 	else
 		lg->log(3, "can`t perform image loading because the 'img' object is not initialized");
 }
+
+void SingleImage::Show()
+{
+	img->show(ID);
+}
