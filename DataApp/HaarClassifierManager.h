@@ -17,6 +17,7 @@ class HaarClassifierManager :
 private:
     string working_path;
     MatFrameSourceI* frame_source;
+    void remove_old_good_and_bad_dirs();
 
 public:
     HaarClassifierManager(string ID, LoggerI* lg, string working_path, MatFrameSourceI* frame_source);

@@ -5,7 +5,7 @@
 
 #include "../internal/api/LoggerI.h"
 
-#include "FrameProcessorContext.h"
+#include "HaarContext.h"
 
 using namespace std;
 using namespace cv;

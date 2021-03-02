@@ -159,6 +159,7 @@
     <ClCompile Include="HaarClassifierCreator.cpp" />
     <ClCompile Include="HaarClassifierManager.cpp" />
     <ClCompile Include="HaarContext.cpp" />
+    <ClCompile Include="PassingProcessor.cpp" />
     <ClCompile Include="RoughCalibrator.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +177,7 @@
     <ClInclude Include="HaarClassifierCreator.h" />
     <ClInclude Include="HaarClassifierManager.h" />
     <ClInclude Include="HaarContext.h" />
+    <ClInclude Include="PassingProcessor.h" />
     <ClInclude Include="RoughCalibrator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

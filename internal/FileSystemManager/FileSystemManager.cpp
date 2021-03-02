@@ -39,3 +39,9 @@ map<string, string> FileSystemManager::read_file_to_map_params(string path)
     file.close();
     return params;
 }
+
+void FileSystemManager::delete_dir_with_all_files(string path)
+{
+    if (verify_existence(path))
+        fs::remove_all(path);
+}

@@ -1,5 +1,19 @@
 #include "HaarClassifierManager.h"
 
+void HaarClassifierManager::remove_old_good_and_bad_dirs()
+{
+	if (FileSystemManager::verify_existence(working_path + "\\Good")) {
+		if (lg != nullptr)
+			lg->log(3, "good directory exists yet, it will be deleted with all files");
+		FileSystemManager::delete_dir_with_all_files(working_path + "\\Good");
+	}
+	if (FileSystemManager::verify_existence(working_path + "\\Bad")) {
+		if (lg != nullptr)
+			lg->log(3, "bad directory exists yet, it will be deleted with all files");
+		FileSystemManager::delete_dir_with_all_files(working_path + "\\Bad");
+	}
+}
+
 HaarClassifierManager::HaarClassifierManager(string ID, LoggerI* lg, string working_path, MatFrameSourceI* frame_source) : DataManagerI(ID, lg)
 {
 	if (!FileSystemManager::verify_existence(working_path))

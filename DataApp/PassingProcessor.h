@@ -4,11 +4,11 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 
-class GoodFramesProcessor :
+class PassingProcessor :
     public FrameProcessorI
 {
 public:
-    GoodFramesProcessor(string ID, LoggerI* lg);
+    PassingProcessor(string ID, LoggerI* lg);
 
     void process(Mat frame, FrameProcessorContext* super_context);
 };

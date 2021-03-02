@@ -10,9 +10,21 @@
 #include "../internal/MatFrameSource/WebCamSource.h"
 #include "../internal\FileSystemManager\FileSystemManager.h"
 #include "HaarClassifierManager.h"
+#include "DataManagerI.h"
 
 using namespace cv;
 using namespace std;
+
+void DeleteAllFilesTesting() {
+	FileSystemManager::delete_dir_with_all_files("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\Good\\");
+	FileSystemManager::delete_dir_with_all_files("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\Bad\\");
+}
+
+void DataManagerTest() {
+	DataManagerI* dm = new HaarClassifierManager("hcm_test", nullptr, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar",
+		new WebCamSource("hcm_wcs_test", nullptr, 0));
+	dm->DatasetCreating(4000, 3000);
+}
 
 void DataSetCreatingTest() {
 	HaarClassifierManager* hcm = new HaarClassifierManager("hcm", nullptr, 
@@ -41,8 +53,9 @@ int main()
 	//captureTest();
 	setlocale(LC_ALL, "");
 	//WebCamSourceTest();
-	DataSetCreatingTest();
-	ReadFileToMapParamsTest();
+	//DataSetCreatingTest();
+	//ReadFileToMapParamsTest();
+	DeleteAllFilesTesting();
 }
 
 /*/
