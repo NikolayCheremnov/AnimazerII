@@ -13,12 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\MatFramSource">
+      <UniqueIdentifier>{9eb2a459-95f0-47a5-a2a6-9be8b4bc3a51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\MatFrameSource">
+      <UniqueIdentifier>{a968e6d1-d687-4f82-be11-3df09103f4f3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataApp.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="WebCamShooter.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\internal\api\LoggerI.cpp">
@@ -30,11 +33,44 @@
     <ClCompile Include="..\internal\FileSystemManager\FileSystemManager.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="DataManagerI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarClassifierManager.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProcessorContext.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProcessorI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\MatFrameSource\WebCamSource.cpp">
+      <Filter>Исходные файлы\MatFramSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceI.cpp">
+      <Filter>Исходные файлы\MatFramSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Calibrator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="GoodFramesProcessor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="RoughCalibrator.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="BadFramesProcessor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarContext.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DataSetPacker.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WebCamShooter.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="..\internal\api\LoggerI.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -42,6 +78,42 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\internal\FileSystemManager\FileSystemManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagerI.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HaarClassifierManager.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameProcessorContext.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameProcessorI.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\MatFrameSource\WebCamSource.h">
+      <Filter>Файлы заголовков\MatFrameSource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceI.h">
+      <Filter>Файлы заголовков\MatFrameSource</Filter>
+    </ClInclude>
+    <ClInclude Include="Calibrator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="GoodFramesProcessor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="RoughCalibrator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="BadFramesProcessor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HaarContext.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSetPacker.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

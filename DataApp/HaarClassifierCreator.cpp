@@ -1,10 +1,37 @@
 #include "HaarClassifierCreator.h"
 
-HaarClassifierCreator::HaarClassifierCreator(string ID, LoggerI* lg, string working_path)
+HaarClassifierCreator::HaarClassifierCreator(string ID, LoggerI* lg) : DataSetPacker(ID, lg)
 {
-	this->ID = ID;
-	this->lg = lg;
-	this->working_path = working_path;
+	
+}
+
+void HaarClassifierCreator::DatasetPack(FrameProcessorContext* super_context, string config_file)
+{
+	HaarContext* context = (HaarContext*)super_context;
+	if (lg != nullptr)
+		lg->log(3, "haar classifier creating started");
+	// initialization by context and configs
+	working_path = context->get_path();
+	Point p1 = Point(*context->get_rect("p1"));
+	Point p2 = Point(*context->get_rect("p2"));
+	map<string, string> params = FileSystemManager::read_file_to_map_params(config_file);
+	
+	// processing
+	if (lg != nullptr)
+		lg->log(3, "bad dat file writing");
+	write_bad_dat_file();
+	if (lg != nullptr)
+		lg->log(3, "good dat file writing");
+	write_good_dat_file(p1, p2);
+	if (lg != nullptr)
+		lg->log(3, "good normalization");
+	good_normalization(params["opencv_createsamples_util_path"], params["dst_path"],
+		params["dst_name"], params["width"], params["height"]);
+	if (lg != nullptr)
+		lg->log(3, "classifier training");
+	training(params["traincascade_util_path"], params["dst_path"], params["normal_srs"],
+		params["cascade_levels"], params["quality_k"], params["false_k"], params["good_count"], 
+		params["bad_count"], params["width"], params["height"], params["allocated_memory"]);
 }
 
 void HaarClassifierCreator::write_bad_dat_file()
@@ -27,21 +54,21 @@ void HaarClassifierCreator::write_good_dat_file(Point p1, Point p2)
 	out.close();
 }
 
-void HaarClassifierCreator::good_normalization(string opencv_createsamples_util_path, string dst_path, string dst_name, double width, double height)
+void HaarClassifierCreator::good_normalization(string opencv_createsamples_util_path, string dst_path, string dst_name, string width, string height)
 {	
 	string cmd = opencv_createsamples_util_path + " -info " +
 		working_path + "\\Good.dat -vec " + dst_path + "\\" +
-		dst_name + "_samples.vec -w " + to_string(width) + " -h " + to_string(height);
+		dst_name + "_samples.vec -w " + width + " -h " + height;
 	system(cmd.c_str());
 }
 
-void HaarClassifierCreator::training(string opencv_createsamples_util_path, string dst_path, string normal_srs, int cascade_levels, double quality_k, double false_k, int good_count, int bad_count, double width, double height, int allocated_memory)
+void HaarClassifierCreator::training(string traincascade_util_path, string dst_path, string normal_srs, string cascade_levels, string quality_k, string false_k, string good_count, string bad_count, string width, string height, string allocated_memory)
 {
-	string cmd = opencv_createsamples_util_path + " -data " + dst_path + " -vec " + normal_srs +
-		" -bg " + working_path + "\\Bad.dat -numStages " + to_string(cascade_levels) + " -minhitrate " + to_string(quality_k) +
-		" -maxFalseAlarmRate " + to_string(false_k) + " -numPos " + to_string(good_count) + " -numNeg " + to_string(bad_count) +
-		" -w " + to_string(width) + " -h " + to_string(height) + " -mode ALL -precalcValBufSize " +
-		to_string(allocated_memory / 2) + " -precalcIdxBufSize " + to_string(allocated_memory / 2);
+	string cmd = traincascade_util_path + " -data " + dst_path + " -vec " + normal_srs +
+		" -bg " + working_path + "\\Bad.dat -numStages " + cascade_levels + " -minhitrate " + quality_k +
+		" -maxFalseAlarmRate " + false_k + " -numPos " + good_count + " -numNeg " + bad_count +
+		" -w " + width + " -h " + height + " -mode ALL -precalcValBufSize " +
+		allocated_memory + " -precalcIdxBufSize " + allocated_memory;
 	system(cmd.c_str());
 }
 

@@ -23,7 +23,7 @@ LoggerI* LoggerTest() {
 void SingleImageTest(LoggerI *lg) {
 	Image* img = new SingleImage("single_img", lg);
 	img->SetImageObj(new MatImage("mat_img", lg));
-	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.jpg");
+	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.bmp");
 	img->PerformImageLoad();
 }
 //
@@ -32,7 +32,7 @@ void StatusImageTest(LoggerI *lg) {
 	Image* img = new SingleImage("single_img", lg);
 	DetectableImage* d_img = new DetectableImage("detectable_img", lg, img, "undefined");
 	d_img->SetImageObj(new MatImage("mat_img", lg));
-	d_img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.jpg");
+	d_img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.bmp");
 	d_img->PerformImageLoad();
 	d_img->SetInfo("false");
 }
@@ -40,6 +40,6 @@ void StatusImageTest(LoggerI *lg) {
 int main() {
 	DetectableImage::Status s = DetectableImage::Status::NEGATIVE;
 	LoggerI* lg = LoggerTest();
-	//SingleImageTest(lg);
-	StatusImageTest(lg);
+	SingleImageTest(lg);
+	//StatusImageTest(lg);
 }

@@ -1,8 +1,9 @@
 #pragma once
 
 #include <string>
-#include <iostream>
+#include <map>
 #include <filesystem>
+#include <fstream>
 
 namespace fs = std::filesystem;
 
@@ -16,6 +17,7 @@ public:
 
 	static bool verify_existence(string name);
 	static list<string> getAllDirFiles(string dir);
-
+	static void create_subdir(string path, string name);
+	static map<string, string> read_file_to_map_params(string path);
 };
 

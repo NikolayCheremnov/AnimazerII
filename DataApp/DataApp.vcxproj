@@ -146,15 +146,37 @@
   <ItemGroup>
     <ClCompile Include="..\internal\api\LoggerI.cpp" />
     <ClCompile Include="..\internal\FileSystemManager\FileSystemManager.cpp" />
+    <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceI.cpp" />
+    <ClCompile Include="..\internal\MatFrameSource\WebCamSource.cpp" />
+    <ClCompile Include="BadFramesProcessor.cpp" />
+    <ClCompile Include="Calibrator.cpp" />
     <ClCompile Include="DataApp.cpp" />
+    <ClCompile Include="DataManagerI.cpp" />
+    <ClCompile Include="DataSetPacker.cpp" />
+    <ClCompile Include="FrameProcessorContext.cpp" />
+    <ClCompile Include="FrameProcessorI.cpp" />
+    <ClCompile Include="GoodFramesProcessor.cpp" />
     <ClCompile Include="HaarClassifierCreator.cpp" />
-    <ClCompile Include="WebCamShooter.cpp" />
+    <ClCompile Include="HaarClassifierManager.cpp" />
+    <ClCompile Include="HaarContext.cpp" />
+    <ClCompile Include="RoughCalibrator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\internal\api\LoggerI.h" />
     <ClInclude Include="..\internal\FileSystemManager\FileSystemManager.h" />
+    <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceI.h" />
+    <ClInclude Include="..\internal\MatFrameSource\WebCamSource.h" />
+    <ClInclude Include="BadFramesProcessor.h" />
+    <ClInclude Include="Calibrator.h" />
+    <ClInclude Include="DataManagerI.h" />
+    <ClInclude Include="DataSetPacker.h" />
+    <ClInclude Include="FrameProcessorContext.h" />
+    <ClInclude Include="FrameProcessorI.h" />
+    <ClInclude Include="GoodFramesProcessor.h" />
     <ClInclude Include="HaarClassifierCreator.h" />
-    <ClInclude Include="WebCamShooter.h" />
+    <ClInclude Include="HaarClassifierManager.h" />
+    <ClInclude Include="HaarContext.h" />
+    <ClInclude Include="RoughCalibrator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
