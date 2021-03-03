@@ -9,8 +9,6 @@ normal_srs:D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\te
 cascade_levels:20
 quality_k:0.999
 false_k:0.4
-good_count:3200
-bad_count:3000
 width:20
 height:20
 allocated_memory:1024

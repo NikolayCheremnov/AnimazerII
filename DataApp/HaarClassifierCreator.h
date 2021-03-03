@@ -16,8 +16,8 @@ private:
 
 	string working_path;
 
-	void write_bad_dat_file();
-	void write_good_dat_file(Point p1, Point p2);
+	int write_bad_dat_file();
+	int write_good_dat_file(Point p1, Point p2);
 	void good_normalization(string opencv_createsamples_util_path,
 		string dst_path, string dst_name, string width, string height);
 	void training(string traincascade_util_path, string dst_path,

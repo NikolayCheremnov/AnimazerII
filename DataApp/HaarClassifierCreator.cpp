@@ -19,10 +19,10 @@ void HaarClassifierCreator::DatasetPack(FrameProcessorContext* super_context, st
 	// processing
 	if (lg != nullptr)
 		lg->log(3, "bad dat file writing");
-	write_bad_dat_file();
+	int bad_count = write_bad_dat_file();
 	if (lg != nullptr)
 		lg->log(3, "good dat file writing");
-	write_good_dat_file(p1, p2);
+	int good_count = write_good_dat_file(p1, p2);
 	if (lg != nullptr)
 		lg->log(3, "good normalization");
 	good_normalization(params["opencv_createsamples_util_path"], params["dst_path"],
@@ -30,11 +30,11 @@ void HaarClassifierCreator::DatasetPack(FrameProcessorContext* super_context, st
 	if (lg != nullptr)
 		lg->log(3, "classifier training");
 	training(params["traincascade_util_path"], params["dst_path"], params["normal_srs"],
-		params["cascade_levels"], params["quality_k"], params["false_k"], params["good_count"], 
-		params["bad_count"], params["width"], params["height"], params["allocated_memory"]);
+		params["cascade_levels"], params["quality_k"], params["false_k"], to_string(good_count * 0.8), 
+		to_string(bad_count), params["width"], params["height"], params["allocated_memory"]);
 }
 
-void HaarClassifierCreator::write_bad_dat_file()
+int HaarClassifierCreator::write_bad_dat_file()
 {
 	list<string> bad_files = FileSystemManager::getAllDirFiles(working_path + "\\Bad");
 	ofstream out;
@@ -42,9 +42,10 @@ void HaarClassifierCreator::write_bad_dat_file()
 	for (string fname: bad_files)
 		out << "Bad\\" + fname << endl;
 	out.close();
+	return bad_files.size();
 }
 
-void HaarClassifierCreator::write_good_dat_file(Point p1, Point p2)
+int HaarClassifierCreator::write_good_dat_file(Point p1, Point p2)
 {
 	list<string> good_files = FileSystemManager::getAllDirFiles(working_path + "\\Bad");
 	ofstream out;
@@ -52,6 +53,7 @@ void HaarClassifierCreator::write_good_dat_file(Point p1, Point p2)
 	for (string fname : good_files)
 		out << "Good\\" + fname << " 1 " << p1.x << " " << p1.y << " " << p2.x << " " << p2.y << endl;
 	out.close();
+	return good_files.size();
 }
 
 void HaarClassifierCreator::good_normalization(string opencv_createsamples_util_path, string dst_path, string dst_name, string width, string height)

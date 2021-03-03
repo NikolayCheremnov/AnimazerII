@@ -18,7 +18,7 @@ public:
 	DataManagerI(string ID, LoggerI* lg);
 	virtual ~DataManagerI() {};
 	
-	virtual FrameProcessorContext* DatasetCreating(int good_set_size, int bad_set_size) = 0;
+	virtual FrameProcessorContext* DatasetCreating() = 0;
 	virtual void DatasetPack(DataSetPacker* packer, FrameProcessorContext* context, string args) = 0;
 };
 

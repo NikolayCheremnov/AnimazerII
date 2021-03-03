@@ -23,14 +23,14 @@ void DeleteAllFilesTesting() {
 void DataManagerTest() {
 	DataManagerI* dm = new HaarClassifierManager("hcm_test", nullptr, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar",
 		new WebCamSource("hcm_wcs_test", nullptr, 0));
-	dm->DatasetCreating(4000, 3000);
+	dm->DatasetCreating();
 }
 
 void DataSetCreatingTest() {
 	HaarClassifierManager* hcm = new HaarClassifierManager("hcm", nullptr, 
 		"D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar", 
 		new WebCamSource("wcs_test", nullptr, 0));
-	hcm->DatasetCreating(10, 10);
+	hcm->DatasetCreating();
 	delete hcm;
 }
 
@@ -53,9 +53,9 @@ int main()
 	//captureTest();
 	setlocale(LC_ALL, "");
 	//WebCamSourceTest();
-	//DataSetCreatingTest();
+	DataSetCreatingTest();
 	//ReadFileToMapParamsTest();
-	DeleteAllFilesTesting();
+	//DeleteAllFilesTesting();
 }
 
 /*/
