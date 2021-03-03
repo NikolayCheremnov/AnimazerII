@@ -1,6 +1,7 @@
 #pragma once
 #include "FrameProcessorContext.h"
 
+#include "../internal/FileSystemManager/FileSystemManager.h"
 #include <opencv2/core/types.hpp>
 
 using namespace cv;
@@ -25,6 +26,8 @@ public:
 
 	// context methods
 	void reset_context();
+	void SaveContext(string path);
+	void LoadContext(string path);
 
 	// common context setters
 	void set_context_with_rect(string header, Point rect_p1, Point rect_p2, string rect_text, int mode);

@@ -48,14 +48,23 @@ void ReadFileToMapParamsTest() {
 		cout << it->first << ':' << it->second << endl;
 }
 
+void SaveLoadContextTest() {
+	HaarContext* hc = new HaarContext("hc", nullptr);
+	hc->set_context_with_rect("test", Point(1, 1), Point(-1, -1), "foo", 0);
+	hc->SaveContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\test_context.ctx");
+	hc->set_context("foo", "bar", "foo", 0);
+	hc->LoadContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\test_context.ctx");
+}
+
 int main()
 {
 	//captureTest();
 	setlocale(LC_ALL, "");
 	//WebCamSourceTest();
-	DataSetCreatingTest();
+	//DataSetCreatingTest();
 	//ReadFileToMapParamsTest();
 	//DeleteAllFilesTesting();
+	SaveLoadContextTest();
 }
 
 /*/

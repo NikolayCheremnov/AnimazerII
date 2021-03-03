@@ -15,5 +15,7 @@ protected:
 public:
 	FrameProcessorContext(string ID, LoggerI* lg);
 	virtual ~FrameProcessorContext() {};
+	virtual void SaveContext(string path) = 0;
+	virtual void LoadContext(string path) = 0;
 };
 
