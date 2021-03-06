@@ -6,11 +6,12 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
-#include "../internal/MatFrameSource/MatFrameSourceI.h"
-#include "../internal/MatFrameSource/WebCamSource.h"
+#include "../internal/MatFrameSource/MatFrameSourceAdapter.h"
 #include "../internal\FileSystemManager\FileSystemManager.h"
 #include "HaarClassifierManager.h"
 #include "DataManagerI.h"
+#include "FrameProcessorContext.h"
+#include "HaarClassifierCreator.h"
 
 using namespace cv;
 using namespace std;
@@ -21,18 +22,37 @@ void DeleteAllFilesTesting() {
 }
 
 void DataManagerTest() {
-	DataManagerI* dm = new HaarClassifierManager("hcm_test", nullptr, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar",
-		new WebCamSource("hcm_wcs_test", nullptr, 0));
+	DataManagerI* dm = new HaarClassifierManager("hcm_test", nullptr, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\sandbox",
+		new MatFrameSourceAdapter("mfsa", nullptr, "WebCamSource"));
 	dm->DatasetCreating();
 }
 
+/*/
 void DataSetCreatingTest() {
 	HaarClassifierManager* hcm = new HaarClassifierManager("hcm", nullptr, 
 		"D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar", 
 		new WebCamSource("wcs_test", nullptr, 0));
-	hcm->DatasetCreating();
+	FrameProcessorContext* fpc = hcm->DatasetCreating();
 	delete hcm;
+	fpc->SaveContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\data_set_Creating_context.ctx");
+	delete fpc;
 }
+/*/
+
+void CascadeCreatingTest() {
+	HaarClassifierManager* hcm = new HaarClassifierManager("hcm", nullptr,
+		"D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar",
+		new MatFrameSourceAdapter("mfsa", nullptr, "WebCamSource"));
+	HaarContext* hc = new HaarContext("hc", nullptr);
+	hc->LoadContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\data_set_Creating_context.ctx");
+	HaarClassifierCreator* hcc = new HaarClassifierCreator("hcc", nullptr);
+	hcm->DatasetPack(hcc, hc, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\haar_creator_config.txt");
+	cout << "success" << endl;
+	delete hcm;
+	delete hc;
+	delete hcc;
+}
+
 
 void WebCamSourceTest() {
 	MatFrameSourceI* mfs = new WebCamSource("wcs_test", nullptr, 0);
@@ -62,9 +82,11 @@ int main()
 	setlocale(LC_ALL, "");
 	//WebCamSourceTest();
 	//DataSetCreatingTest();
+	CascadeCreatingTest();
 	//ReadFileToMapParamsTest();
 	//DeleteAllFilesTesting();
-	SaveLoadContextTest();
+	//SaveLoadContextTest();
+	//DataManagerTest();
 }
 
 /*/

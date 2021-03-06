@@ -14,6 +14,15 @@ list<string> FileSystemManager::getAllDirFiles(string dir)
     return res;
 }
 
+list<string> FileSystemManager::getAllDirFilesShort(string dir)
+{
+    list<string> res;
+    if (verify_existence(dir))
+        for (const auto& entry : fs::directory_iterator(dir))
+            res.push_back(string(entry.path().filename().string()));
+    return res;
+}
+
 void FileSystemManager::create_subdir(string path, string name)
 {
     if (!verify_existence(path))

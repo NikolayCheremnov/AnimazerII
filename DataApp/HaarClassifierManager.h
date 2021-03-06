@@ -8,20 +8,19 @@
 #include "BadFramesProcessor.h"
 #include "PassingProcessor.h"
 #include "HaarContext.h"
-
 #include "../internal/FileSystemManager/FileSystemManager.h"
-#include "../internal/MatFrameSource/MatFrameSourceI.h"
+#include "../internal/MatFrameSource/OnOffMatFrameSourceI.h"
 
 class HaarClassifierManager :
     public DataManagerI
 {
 private:
     string working_path;
-    MatFrameSourceI* frame_source;
+    OnOffMatFrameSourceI* frame_source;
     void remove_old_good_and_bad_dirs();
     void processing_loop(HaarContext* context, FrameProcessorI* frame_processor);
 public:
-    HaarClassifierManager(string ID, LoggerI* lg, string working_path, MatFrameSourceI* frame_source);
+    HaarClassifierManager(string ID, LoggerI* lg, string working_path, OnOffMatFrameSourceI* frame_source);
     ~HaarClassifierManager();
 
     FrameProcessorContext* DatasetCreating();

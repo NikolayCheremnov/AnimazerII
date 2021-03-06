@@ -146,7 +146,9 @@
   <ItemGroup>
     <ClCompile Include="..\internal\api\LoggerI.cpp" />
     <ClCompile Include="..\internal\FileSystemManager\FileSystemManager.cpp" />
+    <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceAdapter.cpp" />
     <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceI.cpp" />
+    <ClCompile Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.cpp" />
     <ClCompile Include="..\internal\MatFrameSource\WebCamSource.cpp" />
     <ClCompile Include="BadFramesProcessor.cpp" />
     <ClCompile Include="Calibrator.cpp" />
@@ -165,7 +167,9 @@
   <ItemGroup>
     <ClInclude Include="..\internal\api\LoggerI.h" />
     <ClInclude Include="..\internal\FileSystemManager\FileSystemManager.h" />
+    <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceAdapter.h" />
     <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceI.h" />
+    <ClInclude Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.h" />
     <ClInclude Include="..\internal\MatFrameSource\WebCamSource.h" />
     <ClInclude Include="BadFramesProcessor.h" />
     <ClInclude Include="Calibrator.h" />

@@ -72,6 +72,12 @@
     <ClCompile Include="PassingProcessor.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.cpp">
+      <Filter>Исходные файлы\MatFramSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceAdapter.cpp">
+      <Filter>Исходные файлы\MatFramSource</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\internal\api\LoggerI.h">
@@ -121,6 +127,12 @@
     </ClInclude>
     <ClInclude Include="PassingProcessor.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.h">
+      <Filter>Файлы заголовков\MatFrameSource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceAdapter.h">
+      <Filter>Файлы заголовков\MatFrameSource</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

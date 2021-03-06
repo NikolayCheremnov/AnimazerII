@@ -30,7 +30,7 @@ void HaarClassifierManager::processing_loop(HaarContext* context, FrameProcessor
 	}
 }
 
-HaarClassifierManager::HaarClassifierManager(string ID, LoggerI* lg, string working_path, MatFrameSourceI* frame_source) : DataManagerI(ID, lg)
+HaarClassifierManager::HaarClassifierManager(string ID, LoggerI* lg, string working_path, OnOffMatFrameSourceI* frame_source) : DataManagerI(ID, lg)
 {
 	if (!FileSystemManager::verify_existence(working_path))
 		throw exception("Bad working_path for haar");
@@ -47,6 +47,7 @@ HaarClassifierManager::~HaarClassifierManager()
 
 FrameProcessorContext* HaarClassifierManager::DatasetCreating()
 {
+	frame_source->turn_on();
 	// preparing directories for bad and good pictures
 	FileSystemManager::create_subdir(working_path, "Good");
 	FileSystemManager::create_subdir(working_path, "Bad");
@@ -54,7 +55,7 @@ FrameProcessorContext* HaarClassifierManager::DatasetCreating()
 	// using objects
 	HaarContext* context = new HaarContext("haar_context_used_by" + ID, lg);
 	FrameProcessorI* frame_processor = nullptr;
-
+	
 	// 1. calibration
 	context->set_context_with_rect("good_calibration", Point(200, 150), Point(500, 350), "calibration", 0);
 	frame_processor = new Calibrator(ID + "_calibrator", lg);
@@ -79,6 +80,7 @@ FrameProcessorContext* HaarClassifierManager::DatasetCreating()
 	processing_loop(context, frame_processor);
 	delete frame_processor;
 
+	frame_source->turn_off();
 	return context;
 }
 
