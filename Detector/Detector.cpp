@@ -28,7 +28,7 @@ LoggerI* LoggerTest() {
 DetectableImage* StatusImageTest(LoggerI* lg) {
 	Image* img = new SingleImage("single_img", lg);
 	img->SetImageObj(new MatImage("mat_img", lg));
-	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.jpg");
+	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\43.bmp");
 	DetectableImage* d_img = new DetectableImage("detectable_img", lg, img, "undefined");
 	d_img->PerformImageLoad();
 	d_img->SetInfo("false");
@@ -38,7 +38,7 @@ DetectableImage* StatusImageTest(LoggerI* lg) {
 
 void CascadeProcessorTesting(LoggerI* lg, Image* img) {
 	CascadeProcessor* prc = new CascadeProcessor("cp", lg);
-	prc->set_path("D:\\cpplibs\\opencv\\build\\etc\\haarcascades\\haarcascade_frontalface_default.xml");
+	prc->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\cascades\\haarcascade_frontcatface.xml");
 	prc->prepare();
 	prc->process(img);
 	img->Show();

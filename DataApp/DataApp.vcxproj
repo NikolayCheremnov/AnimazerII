@@ -153,6 +153,7 @@
     <ClCompile Include="BadFramesProcessor.cpp" />
     <ClCompile Include="Calibrator.cpp" />
     <ClCompile Include="DataApp.cpp" />
+    <ClCompile Include="DataAppFactoryI.cpp" />
     <ClCompile Include="DataManagerI.cpp" />
     <ClCompile Include="DataSetPacker.cpp" />
     <ClCompile Include="FrameProcessorContext.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="HaarClassifierCreator.cpp" />
     <ClCompile Include="HaarClassifierManager.cpp" />
     <ClCompile Include="HaarContext.cpp" />
+    <ClCompile Include="HaarSubsystemFactory.cpp" />
     <ClCompile Include="PassingProcessor.cpp" />
     <ClCompile Include="RoughCalibrator.cpp" />
   </ItemGroup>
@@ -173,6 +175,7 @@
     <ClInclude Include="..\internal\MatFrameSource\WebCamSource.h" />
     <ClInclude Include="BadFramesProcessor.h" />
     <ClInclude Include="Calibrator.h" />
+    <ClInclude Include="DataAppFactoryI.h" />
     <ClInclude Include="DataManagerI.h" />
     <ClInclude Include="DataSetPacker.h" />
     <ClInclude Include="FrameProcessorContext.h" />
@@ -181,6 +184,7 @@
     <ClInclude Include="HaarClassifierCreator.h" />
     <ClInclude Include="HaarClassifierManager.h" />
     <ClInclude Include="HaarContext.h" />
+    <ClInclude Include="HaarSubsystemFactory.h" />
     <ClInclude Include="PassingProcessor.h" />
     <ClInclude Include="RoughCalibrator.h" />
   </ItemGroup>

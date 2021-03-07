@@ -30,7 +30,7 @@ void HaarClassifierCreator::DatasetPack(FrameProcessorContext* super_context, st
 	if (lg != nullptr)
 		lg->log(3, "classifier training");
 	training(params["traincascade_util_path"], params["dst_path"], params["normal_srs"],
-		params["cascade_levels"], params["quality_k"], params["false_k"], to_string(good_count * 0.8), 
+		params["cascade_levels"], params["quality_k"], params["false_k"], to_string(int(good_count*0.8)), 
 		to_string(bad_count), params["width"], params["height"], params["allocated_memory"]);
 }
 
@@ -53,7 +53,7 @@ int HaarClassifierCreator::write_bad_dat_file()
 
 int HaarClassifierCreator::write_good_dat_file(Point p1, Point p2)
 {
-	list<string> good_files = FileSystemManager::getAllDirFilesShort(working_path + "\\Bad");
+	list<string> good_files = FileSystemManager::getAllDirFilesShort(working_path + "\\Good");
 	ofstream out;
 	out.open(working_path + "\\Good.dat");	// TODO: add try/catch
 	bool isFirst = true;
@@ -73,7 +73,7 @@ void HaarClassifierCreator::good_normalization(string opencv_createsamples_util_
 	string cmd = opencv_createsamples_util_path + " -info " +
 		working_path + "\\Good.dat -vec " + dst_path + "\\" +
 		dst_name + "_samples.vec -w " + width + " -h " + height + " -num " + good_size;
-	std::cout << "###" << endl << cmd << endl << "###";
+	std::cout << "\n###" << endl << cmd << endl << "###\n";
 	system(cmd.c_str());
 }
 
@@ -84,6 +84,7 @@ void HaarClassifierCreator::training(string traincascade_util_path, string dst_p
 		" -maxFalseAlarmRate " + false_k + " -numPos " + good_count + " -numNeg " + bad_count +
 		" -w " + width + " -h " + height + " -mode ALL -precalcValBufSize " +
 		allocated_memory + " -precalcIdxBufSize " + allocated_memory;
+	std::cout << "\n###" << endl << cmd << endl << "###\n";
 	system(cmd.c_str());
 }
 

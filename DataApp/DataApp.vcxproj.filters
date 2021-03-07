@@ -19,6 +19,24 @@
     <Filter Include="Файлы заголовков\MatFrameSource">
       <UniqueIdentifier>{a968e6d1-d687-4f82-be11-3df09103f4f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\FileSystemManager">
+      <UniqueIdentifier>{69a9f853-f2e5-4c72-a050-981f1b1bb385}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\FileSystemManager">
+      <UniqueIdentifier>{ed8eeb85-b31a-4489-bf9c-26b7e3e42080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\FrameProcessor">
+      <UniqueIdentifier>{fdcdc7b5-bfcb-4b9f-88fb-feac3cd7d9d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\FrameProcessor">
+      <UniqueIdentifier>{0c830f48-8340-4605-b493-3ac70a2f91b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Context">
+      <UniqueIdentifier>{324ad0bd-5ed3-47a5-a2b0-dbbdd1ce113a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Context">
+      <UniqueIdentifier>{df6480e3-4549-44a2-b06b-5ab166cba73f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataApp.cpp">
@@ -30,19 +48,10 @@
     <ClCompile Include="HaarClassifierCreator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\internal\FileSystemManager\FileSystemManager.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="DataManagerI.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="HaarClassifierManager.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameProcessorContext.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="FrameProcessorI.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\internal\MatFrameSource\WebCamSource.cpp">
@@ -51,25 +60,7 @@
     <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceI.cpp">
       <Filter>Исходные файлы\MatFramSource</Filter>
     </ClCompile>
-    <ClCompile Include="Calibrator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="GoodFramesProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="RoughCalibrator.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="BadFramesProcessor.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="HaarContext.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="DataSetPacker.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="PassingProcessor.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.cpp">
@@ -77,6 +68,39 @@
     </ClCompile>
     <ClCompile Include="..\internal\MatFrameSource\MatFrameSourceAdapter.cpp">
       <Filter>Исходные файлы\MatFramSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\internal\FileSystemManager\FileSystemManager.cpp">
+      <Filter>Исходные файлы\FileSystemManager</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProcessorI.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="Calibrator.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="BadFramesProcessor.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="GoodFramesProcessor.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="PassingProcessor.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="RoughCalibrator.cpp">
+      <Filter>Исходные файлы\FrameProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameProcessorContext.cpp">
+      <Filter>Исходные файлы\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarContext.cpp">
+      <Filter>Исходные файлы\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAppFactoryI.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarSubsystemFactory.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,19 +110,10 @@
     <ClInclude Include="HaarClassifierCreator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\internal\FileSystemManager\FileSystemManager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="DataManagerI.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="HaarClassifierManager.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameProcessorContext.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="FrameProcessorI.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\internal\MatFrameSource\WebCamSource.h">
@@ -107,25 +122,7 @@
     <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceI.h">
       <Filter>Файлы заголовков\MatFrameSource</Filter>
     </ClInclude>
-    <ClInclude Include="Calibrator.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="GoodFramesProcessor.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="RoughCalibrator.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="BadFramesProcessor.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="HaarContext.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="DataSetPacker.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="PassingProcessor.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\internal\MatFrameSource\OnOffMatFrameSourceI.h">
@@ -133,6 +130,39 @@
     </ClInclude>
     <ClInclude Include="..\internal\MatFrameSource\MatFrameSourceAdapter.h">
       <Filter>Файлы заголовков\MatFrameSource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\internal\FileSystemManager\FileSystemManager.h">
+      <Filter>Файлы заголовков\FileSystemManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Calibrator.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="BadFramesProcessor.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="GoodFramesProcessor.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="RoughCalibrator.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="PassingProcessor.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameProcessorI.h">
+      <Filter>Файлы заголовков\FrameProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="HaarContext.h">
+      <Filter>Файлы заголовков\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameProcessorContext.h">
+      <Filter>Файлы заголовков\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="DataAppFactoryI.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="HaarSubsystemFactory.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

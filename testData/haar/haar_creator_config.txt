@@ -5,10 +5,10 @@ width:20
 height:20
 traincascade_util_path:D:\cpplibs\opencv_2\opencv\build\x64\vc14\bin\opencv_traincascade.exe
 dst_path:D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\testData\haar\cascade
-normal_srs:D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\testData\haar\ugra
-cascade_levels:20
+normal_srs:D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\testData\haar\ugra_samples.vec
+cascade_levels:14
 quality_k:0.999
 false_k:0.4
 width:20
 height:20
-allocated_memory:1024
+allocated_memory:2048

@@ -6,12 +6,11 @@
 #include <opencv2/videoio.hpp>
 #include <opencv2/highgui.hpp>
 
-#include "../internal/MatFrameSource/MatFrameSourceAdapter.h"
 #include "../internal\FileSystemManager\FileSystemManager.h"
-#include "HaarClassifierManager.h"
 #include "DataManagerI.h"
+#include "HaarSubsystemFactory.h"
 #include "FrameProcessorContext.h"
-#include "HaarClassifierCreator.h"
+#include "DataSetPacker.h"
 
 using namespace cv;
 using namespace std;
@@ -40,17 +39,18 @@ void DataSetCreatingTest() {
 /*/
 
 void CascadeCreatingTest() {
-	HaarClassifierManager* hcm = new HaarClassifierManager("hcm", nullptr,
-		"D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar",
-		new MatFrameSourceAdapter("mfsa", nullptr, "WebCamSource"));
-	HaarContext* hc = new HaarContext("hc", nullptr);
-	hc->LoadContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\data_set_Creating_context.ctx");
-	HaarClassifierCreator* hcc = new HaarClassifierCreator("hcc", nullptr);
-	hcm->DatasetPack(hcc, hc, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\haar_creator_config.txt");
-	cout << "success" << endl;
-	delete hcm;
-	delete hc;
-	delete hcc;
+	HaarSubsystemFactory* hsf = new HaarSubsystemFactory("hsf", nullptr);
+	map<string, string> args;
+	args.insert(pair<string, string>("source_name", "WebCamSource"));
+	args.insert(pair<string, string>("working_path", "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar"));
+	DataManagerI* dm = hsf->create_data_manager("dm", nullptr, args);
+	FrameProcessorContext* fpc = hsf->create_context("fpc", nullptr, args);
+	DataSetPacker* dsp = hsf->create_data_set_packer("dsp", nullptr, args);
+	fpc->LoadContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\data_set_Creating_context.ctx");
+	dm->DatasetPack(dsp, fpc, "D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\haar_creator_config.txt");
+	delete dm;
+	delete fpc;
+	delete dsp;
 }
 
 
