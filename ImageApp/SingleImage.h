@@ -11,9 +11,11 @@ private:
 
 public:
     SingleImage(string ID, LoggerI* lg) : Image(ID, lg) {}
-    ~SingleImage() {}
+    ~SingleImage();
     void set_path(string path) { this->path = path; }
     void PerformImageLoad();
+    void ReleaseImage();
     void Show();
+    Image* clone();
 };
 

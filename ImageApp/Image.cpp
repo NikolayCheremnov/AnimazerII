@@ -9,14 +9,6 @@ Image::Image(string ID, LoggerI* lg)
 		lg->log(3, "'Image' object " + ID + " was created");
 }
 
-Image::~Image()
-{
-	if (img != nullptr)
-		delete img;
-	if (lg != nullptr)
-		lg->log(3, "'Image' object " + ID + " was deleted");
-}
-
 void Image::SetImageObj(ImageObj* img)
 {
 	try {

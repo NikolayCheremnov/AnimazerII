@@ -5,6 +5,11 @@ DetectableImage::DetectableImage(string ID, LoggerI* lg, Image* image, string in
 	SetInfo(info);
 }
 
+DetectableImage::~DetectableImage()
+{
+	delete image;
+}
+
 void DetectableImage::set_path(string path)
 {
 	image->set_path(path);
@@ -15,9 +20,19 @@ void DetectableImage::PerformImageLoad()
 	image->PerformImageLoad();
 }
 
+void DetectableImage::ReleaseImage()
+{
+	image->ReleaseImage();
+}
+
 void DetectableImage::Show()
 {
 	image->Show();
+}
+
+Image* DetectableImage::clone()
+{
+	return new DetectableImage(ID + "_clone", lg, image->clone(), GetInfoStr());
 }
 
 string DetectableImage::GetInfoStr()

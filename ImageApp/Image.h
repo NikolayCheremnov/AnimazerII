@@ -16,7 +16,7 @@ protected:
 public:
 
 	Image(string ID, LoggerI* lg);
-	virtual ~Image();
+	virtual ~Image() {};
 
 	string getID() { return ID; }
 	virtual void SetImageObj(ImageObj* img);
@@ -24,6 +24,8 @@ public:
 
 	virtual void set_path(string path) = 0;
 	virtual void PerformImageLoad() = 0;
+	virtual void ReleaseImage() = 0;
 	virtual void Show() = 0;
+	virtual Image* clone() = 0;
 };
 

@@ -18,12 +18,6 @@ StatusImageI::StatusImageI(string ID, LoggerI* lg, Image* image): Image(ID, lg)
 
 }
 
-StatusImageI::~StatusImageI()
-{
-	if (image != nullptr)
-		delete image;
-}
-
 void StatusImageI::SetImageObj(ImageObj* img)
 {
 	image->SetImageObj(img);

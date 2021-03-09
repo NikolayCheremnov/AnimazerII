@@ -35,11 +35,13 @@ void StatusImageTest(LoggerI *lg) {
 	d_img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\image.bmp");
 	d_img->PerformImageLoad();
 	d_img->SetInfo("false");
+	system("pause");
+	d_img->Show();
 }
 
 int main() {
 	DetectableImage::Status s = DetectableImage::Status::NEGATIVE;
 	LoggerI* lg = LoggerTest();
+	StatusImageTest(lg);
 	SingleImageTest(lg);
-	//StatusImageTest(lg);
 }
