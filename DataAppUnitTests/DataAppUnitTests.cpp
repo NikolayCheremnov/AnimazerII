@@ -5,6 +5,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace DataAppUnitTests
 {
+	// test example with file system manager tests
 	TEST_CLASS(DataAppUnitTests)
 	{
 	public:
@@ -12,5 +13,7 @@ namespace DataAppUnitTests
 		TEST_METHOD(TestMethod1)
 		{
 		}
+
+		
 	};
 }

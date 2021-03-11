@@ -10,7 +10,8 @@ list<string> FileSystemManager::getAllDirFiles(string dir)
     list<string> res;
     if (verify_existence(dir))
         for (const auto& entry : fs::directory_iterator(dir))
-            res.push_back(string(entry.path().string()));
+            if (entry.path().string().find('.') != string::npos)
+                res.push_back(string(entry.path().string()));
     return res;
 }
 
@@ -19,7 +20,8 @@ list<string> FileSystemManager::getAllDirFilesShort(string dir)
     list<string> res;
     if (verify_existence(dir))
         for (const auto& entry : fs::directory_iterator(dir))
-            res.push_back(string(entry.path().filename().string()));
+            if (entry.path().filename().string().find('.') != string::npos)
+                res.push_back(string(entry.path().filename().string()));
     return res;
 }
 
