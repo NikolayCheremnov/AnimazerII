@@ -9,7 +9,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace FileSystemManagerTests
 {
-	// file system manager tests
+	// FileSystemManager class testing
 	TEST_CLASS(FileSystemManagerTests)
 	{
 	public:
