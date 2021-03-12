@@ -1,0 +1,12 @@
+rect_p1:
+rect_p1_x:0
+rect_p1_y:0
+rect_p2:
+rect_p2_x:1
+rect_p2_y:1
+rect_str:test
+header:test
+path:test
+mode:100
+good_size:10
+bad_size:10

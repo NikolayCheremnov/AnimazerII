@@ -24,15 +24,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataAppUnitTests.cpp">
-      <Filter>Исходные файлы\tests</Filter>
-    </ClCompile>
-    <ClCompile Include="HaarSubSystemFactoryTests.cpp">
-      <Filter>Исходные файлы\tests</Filter>
-    </ClCompile>
-    <ClCompile Include="FileSystemManagerTests.cpp">
-      <Filter>Исходные файлы\tests</Filter>
-    </ClCompile>
     <ClCompile Include="..\DataApp\BadFramesProcessor.cpp">
       <Filter>Исходные файлы\DataAppFiles</Filter>
     </ClCompile>
@@ -95,6 +86,21 @@
     </ClCompile>
     <ClCompile Include="..\internal\MatFrameSource\WebCamSource.cpp">
       <Filter>Исходные файлы\DataAppFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="DataAppUnitTests.cpp">
+      <Filter>Исходные файлы\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemManagerTests.cpp">
+      <Filter>Исходные файлы\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarSubSystemFactoryTests.cpp">
+      <Filter>Исходные файлы\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameSourceTests.cpp">
+      <Filter>Исходные файлы\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="HaarContextTests.cpp">
+      <Filter>Исходные файлы\tests</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
