@@ -28,7 +28,7 @@ LoggerI* LoggerTest() {
 DetectableImage* StatusImageTest(LoggerI* lg) {
 	Image* img = new SingleImage("single_img", lg);
 	img->SetImageObj(new MatImage("mat_img", lg));
-	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\43.bmp");
+	img->set_path("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\cat_3.jpg");
 	DetectableImage* d_img = new DetectableImage("detectable_img", lg, img, "undefined");
 	d_img->PerformImageLoad();
 	d_img->SetInfo("false");

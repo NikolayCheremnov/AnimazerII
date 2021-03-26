@@ -1,6 +1,7 @@
 ﻿// DataApp.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+
 #include <iostream>
 #include <map>
 #include <opencv2/videoio.hpp>
@@ -75,8 +76,7 @@ void SaveLoadContextTest() {
 	hc->set_context("foo", "bar", "foo", 0);
 	hc->LoadContext("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\haar\\test_context.ctx");
 }
-
-int main()
+void main()
 {
 	//captureTest();
 	setlocale(LC_ALL, "");

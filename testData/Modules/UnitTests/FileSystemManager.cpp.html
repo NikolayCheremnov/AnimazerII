@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8"/>
+	    <title>FileSystemManager.cpp</title>
+	    <link href="../../third-party/google-code-prettify/prettify-CppCoverage.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="../../third-party/google-code-prettify/prettify.js"></script>
+	</head>
+	<body onload="prettyPrint()">
+        <h4></h4>
+		<pre class="prettyprint lang-cpp linenums">
+#include "FileSystemManager.h"
+
+bool FileSystemManager::verify_existence(string name)
+<span style = "background-color:#dfd">{
+    return fs::exists(name);
+}</span>
+
+list&lt;string&gt; FileSystemManager::getAllDirFiles(string dir)
+<span style = "background-color:#dfd">{
+    list&lt;string&gt; res;
+    if (verify_existence(dir))
+        for (const auto&amp; entry : fs::directory_iterator(dir))
+            if (entry.path().string().find('.') != string::npos)
+                res.push_back(string(entry.path().string()));
+    return res;
+}</span>
+
+list&lt;string&gt; FileSystemManager::getAllDirFilesShort(string dir)
+<span style = "background-color:#dfd">{
+    list&lt;string&gt; res;
+    if (verify_existence(dir))
+        for (const auto&amp; entry : fs::directory_iterator(dir))
+            if (entry.path().filename().string().find('.') != string::npos)
+                res.push_back(string(entry.path().filename().string()));
+    return res;
+}</span>
+
+void FileSystemManager::create_subdir(string path, string name)
+<span style = "background-color:#dfd">{
+    if (!verify_existence(path))
+        throw exception("root path does not exist");
+    if (!fs::create_directory(path + "\\" + name))</span>
+<span style = "background-color:#fdd">        throw exception("couldn't create a directory");</span>
+    
+<span style = "background-color:#dfd">}</span>
+
+map&lt;string, string&gt; FileSystemManager::read_file_to_map_params(string path)
+<span style = "background-color:#dfd">{
+    if (!verify_existence(path))</span>
+<span style = "background-color:#fdd">        throw exception("file does not exist");</span>
+<span style = "background-color:#dfd">    map&lt;string, string&gt; params;
+    ifstream file;
+    file.open(path);
+    string line;
+    while (getline(file, line)) {
+        string arg = line.substr(0, line.find(':'));
+        string value = line.substr(line.find(':') + 1);
+        params.insert(pair&lt;string, string&gt;(arg, value));
+    } 
+    file.close();
+    return params;
+}</span>
+
+void FileSystemManager::delete_dir_with_all_files(string path)
+<span style = "background-color:#dfd">{
+    if (verify_existence(path))
+        fs::remove_all(path);
+}</span></pre>
+	</body>
+</html>

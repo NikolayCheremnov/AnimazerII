@@ -9,7 +9,6 @@ void SingleImage::PerformImageLoad()
 {
 	if (img != nullptr) {
 		img->init(path);
-		img->show(ID);
 		if (lg != nullptr) {
 			lg->log(1, "bridge:SingleImage&ImageObj:PerformImageLoad:" + ID + "&" + img->getID() +
 				":Bridge is used between 'Image' object " + ID + "and 'ImageObj' object " + img->getID() + ":");
@@ -17,7 +16,8 @@ void SingleImage::PerformImageLoad()
 		}
 	}
 	else
-		lg->log(3, "can`t perform image loading because the 'img' object is not initialized");
+		if (lg != nullptr)
+			lg->log(3, "can`t perform image loading because the 'img' object is not initialized");
 }
 
 void SingleImage::ReleaseImage()

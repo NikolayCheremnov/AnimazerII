@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8"/>
+	    <title>TestFileSystemManager.cpp</title>
+	    <link href="../../third-party/google-code-prettify/prettify-CppCoverage.css" type="text/css" rel="stylesheet" />
+	    <script type="text/javascript" src="../../third-party/google-code-prettify/prettify.js"></script>
+	</head>
+	<body onload="prettyPrint()">
+        <h4></h4>
+		<pre class="prettyprint lang-cpp linenums">
+#include "gtest/gtest.h"
+#include "../internal/FileSystemManager/FileSystemManager.h"
+
+#define BASE_TEST_DIR string("D:\\CherepNick\\ASTU\\4_course\\7_semester\\APIPP\\AnimazerII\\AnimazerII\\testData\\unit_test_data\\")
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_VerifyExistense) {
+	EXPECT_TRUE(FileSystemManager::verify_existence(BASE_TEST_DIR));
+	EXPECT_FALSE(FileSystemManager::verify_existence(BASE_TEST_DIR + "not_exist"));
+	EXPECT_TRUE(FileSystemManager::verify_existence(BASE_TEST_DIR + "existing_file.txt"));
+	EXPECT_FALSE(FileSystemManager::verify_existence(BASE_TEST_DIR + "not_existing_file.txt"));
+}</span>
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_getAllDirFiles) {
+	list&lt;string&gt; res = FileSystemManager::getAllDirFiles(BASE_TEST_DIR);
+	if (res.size() != 3)</span>
+<span style = "background-color:#fdd">		FAIL();</span>
+<span style = "background-color:#dfd">}</span>
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_getAllDirFilesShort) {
+	list&lt;string&gt; res = FileSystemManager::getAllDirFilesShort(BASE_TEST_DIR);
+	if (res.size() != 3)</span>
+<span style = "background-color:#fdd">		FAIL();</span>
+<span style = "background-color:#dfd">}</span>
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_create_subdir) {
+	FileSystemManager::create_subdir(BASE_TEST_DIR, "subdir");
+	try {
+		FileSystemManager::create_subdir(BASE_TEST_DIR + "not_exist\\", "subdir");</span>
+<span style = "background-color:#fdd">		FAIL();</span>
+	}
+	catch (exception ex) {
+		
+<span style = "background-color:#dfd">	}
+}</span>
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_read_file_to_map_params) {
+	map&lt;string, string&gt; params = FileSystemManager::read_file_to_map_params(BASE_TEST_DIR + "map_params.txt");
+	EXPECT_EQ(params["first_param"], "first");
+	EXPECT_EQ(params["second_param"], "second");
+	EXPECT_EQ(params["third_param"], "third");
+}</span>
+
+<span style = "background-color:#dfd">TEST(TestFileSystemManager, Test_delete_dir_with_all_files) {
+	FileSystemManager::create_subdir(BASE_TEST_DIR, "files");
+	FileSystemManager::create_subdir(BASE_TEST_DIR + "files//", "f1");
+	FileSystemManager::delete_dir_with_all_files(BASE_TEST_DIR + "files");
+	FileSystemManager::delete_dir_with_all_files(BASE_TEST_DIR + "subdir");
+}</span></pre>
+	</body>
+</html>

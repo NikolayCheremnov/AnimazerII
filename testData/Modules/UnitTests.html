@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8"/>
+        <title>UnitTests.exe</title>
+        <link rel="stylesheet" type="text/css" href="../third-party/css/style.css"/>
+        <script src="../third-party/RGraph/libraries/RGraph.common.core.js" type="text/javascript"></script>
+        <script src="../third-party/RGraph/libraries/RGraph.common.dynamic.js" type="text/javascript"></script>
+        <script src="../third-party/RGraph/libraries/RGraph.common.tooltips.js" type="text/javascript"></script>
+        <script src="../third-party/RGraph/libraries/RGraph.pie.js" type="text/javascript"></script>
+        <script src="../third-party/JQuery/jquery-1.11.1.min.js"></script>
+    </head>
+    <body>
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            
+            new RGraph.Pie('pi_e160b47f-deae-4a30-aff2-88c592ceeb66', [100, 49])
+                .set('labels', ['Cover 67%','Uncover 33%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 100 lines (67%)', 'uncover 49 lines (33%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_2ac4020d-2304-43b1-9685-71bd102e5ab7', [0, 33])
+                .set('labels', ['Cover 0%','Uncover 100%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 0 lines (0%)', 'uncover 33 lines (100%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_1fc3f4f2-b03a-4aa2-b251-d720751fa45a', [11, 9])
+                .set('labels', ['Cover 55%','Uncover 45%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 11 lines (55%)', 'uncover 9 lines (45%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_0d43c1b0-3831-4ca6-a433-6896135b1b40', [8, 2])
+                .set('labels', ['Cover 80%','Uncover 20%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 8 lines (80%)', 'uncover 2 lines (20%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_98c724a8-4e2b-4912-94e9-c46b32d70a08', [32, 3])
+                .set('labels', ['Cover 91%','Uncover 9%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 32 lines (91%)', 'uncover 3 lines (9%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_85cf10e2-e4d8-4e52-a5e6-59dc01c55533', [42, 2])
+                .set('labels', ['Cover 95%','Uncover 5%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 42 lines (95%)', 'uncover 2 lines (5%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_3030eee5-af90-4353-85f9-884bcd1179a3', [5, 0])
+                .set('labels', ['Cover 100%','Uncover 0%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 5 lines (100%)', 'uncover 0 lines (0%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+            new RGraph.Pie('pi_e436fd63-84b4-4d9c-8f05-09ee888a4a99', [2, 0])
+                .set('labels', ['Cover 100%','Uncover 0%'])
+                .set('colors', ['rgb(0,255,0)','rgb(255,0,0)'])
+                .set('linewidth', 1)
+                .set('shadow', true)
+                .set('tooltips', ['cover 2 lines (100%)', 'uncover 0 lines (0%)'])
+                .set('tooltips.event', 'onmousemove')
+                .set('labels.sticks', true)
+                .set('labels.sticks.length', 10)
+                .draw();
+            
+
+      })
+    </script>    
+        <h1>
+        UnitTests.exe
+        </h1>
+        <h4>
+        
+        </h4>
+        <table id="rounded-corner">
+            <thead>
+                <tr>
+                    <th scope="col" class="rounded-left">Coverage</th>
+                    <th scope="col">Total lines</th>
+                    <th scope="col" class="rounded-right">Items</th>
+                </tr>
+            </thead> 
+            <tbody>
+                
+                <tr>
+                    <td>
+            <canvas id="pi_e160b47f-deae-4a30-aff2-88c592ceeb66" width="280" height="100">Cover 67%</canvas>
+                    </td>            
+                    <td>149</td>
+                    <td>            
+                      
+                      D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\Debug\UnitTests.exe
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_2ac4020d-2304-43b1-9685-71bd102e5ab7" width="280" height="100">Cover 0%</canvas>
+                    </td>            
+                    <td>33</td>
+                    <td>            
+                       <a href="UnitTests/gtest-printers.h.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\include\gtest\gtest-printers.h</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_1fc3f4f2-b03a-4aa2-b251-d720751fa45a" width="280" height="100">Cover 55%</canvas>
+                    </td>            
+                    <td>20</td>
+                    <td>            
+                       <a href="UnitTests/gtest.h.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\include\gtest\gtest.h</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_0d43c1b0-3831-4ca6-a433-6896135b1b40" width="280" height="100">Cover 80%</canvas>
+                    </td>            
+                    <td>10</td>
+                    <td>            
+                       <a href="UnitTests/gtest-port.h.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\include\gtest\internal\gtest-port.h</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_98c724a8-4e2b-4912-94e9-c46b32d70a08" width="280" height="100">Cover 91%</canvas>
+                    </td>            
+                    <td>35</td>
+                    <td>            
+                       <a href="UnitTests/TestFileSystemManager.cpp.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\TestFileSystemManager.cpp</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_85cf10e2-e4d8-4e52-a5e6-59dc01c55533" width="280" height="100">Cover 95%</canvas>
+                    </td>            
+                    <td>44</td>
+                    <td>            
+                       <a href="UnitTests/FileSystemManager.cpp.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\internal\FileSystemManager\FileSystemManager.cpp</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_3030eee5-af90-4353-85f9-884bcd1179a3" width="280" height="100">Cover 100%</canvas>
+                    </td>            
+                    <td>5</td>
+                    <td>            
+                       <a href="UnitTests/gtest-internal.h.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.3\build\native\include\gtest\internal\gtest-internal.h</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+                <tr>
+                    <td>
+            <canvas id="pi_e436fd63-84b4-4d9c-8f05-09ee888a4a99" width="280" height="100">Cover 100%</canvas>
+                    </td>            
+                    <td>2</td>
+                    <td>            
+                       <a href="UnitTests/test.cpp.html">D:\CherepNick\ASTU\4_course\7_semester\APIPP\AnimazerII\AnimazerII\UnitTests\test.cpp</a> 
+                      
+                      
+                    </td>
+                </tr>        
+                
+            </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="2" class="rounded-foot-left"></td>
+                <td class="rounded-foot-right"></td>
+                </tr>
+            </tfoot>            
+        </table>
+    </body>
+</html>

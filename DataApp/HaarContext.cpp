@@ -2,6 +2,8 @@
 
 HaarContext::HaarContext(string ID, LoggerI* lg) : FrameProcessorContext(ID, lg)
 {
+	rect_p1 = nullptr;
+	rect_p2 = nullptr;
 	reset_context();
 }
 
